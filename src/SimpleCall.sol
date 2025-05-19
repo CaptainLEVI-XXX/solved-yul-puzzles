@@ -8,6 +8,10 @@ contract SimpleCall {
             // your code here
             // call "t.foo()"
             // hint: "foo()" has function selector 0xc2985578
+            let fooSelector:= 0xc2985578
+            mstore(0x00,fooSelector)
+            let success:= call(gas(),t,0,0x1c,0x20,0x00,0x00)
+            
        }
     }
 }
