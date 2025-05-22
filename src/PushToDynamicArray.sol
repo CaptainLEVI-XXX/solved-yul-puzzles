@@ -9,6 +9,13 @@ contract PushToDynamicArray {
             // your code here
             // push the newValue to the dynamic array `pushToMe`
             // Hint: https://www.rareskills.io/post/solidity-dynamic
+            let slot:=pushToMe.slot
+            let size:=sload(slot)
+            mstore(0x00,slot)
+            let dataLocation := keccak256(0x00,0x20)
+            sstore(add(dataLocation,size),newValue)
+            sstore(slot,add(size,1))
+
         }
     }
 
