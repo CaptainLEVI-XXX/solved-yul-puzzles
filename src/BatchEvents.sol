@@ -7,10 +7,6 @@ contract BatchEvents {
 
     function main(address[] memory emitters, bytes32[] memory ids, uint256[] memory nums) external {
         assembly {
-            // your code here
-            // emit the `MyEvent(address,bytes32,uint256)` event
-            // Assuming all arrays (emitters, ids, and nums) are of equal length.
-            // iterate over the set of parameters and emit events based on the array length.
             let size := mload(emitters)
 
             let emitterData := add(emitters,0x20)

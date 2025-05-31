@@ -8,8 +8,6 @@ contract Calculator {
 
     function add(uint256 x, uint256 y) external pure returns (uint256 result) {
         assembly {
-            // your code here
-            // add x and y
             result:= add(x,y)
 
         }
@@ -17,7 +15,6 @@ contract Calculator {
 
     function sub(uint256 x, uint256 y) external pure returns (uint256 result) {
         assembly {
-            // your code here
             // subtract y from x
             result:= sub(x,y)
         }
@@ -25,16 +22,12 @@ contract Calculator {
 
     function mul(uint256 x, uint256 y) external pure returns (uint256 result) {
         assembly {
-            // your code here
-            // multiply x by y
             result:= mul(x,y)
         }
     }
 
     function div(uint256 x, uint256 y) external pure returns (uint256 result) {
         assembly {
-            // your code here
-            // div x by y
             result:= div(x,y)
         }
     }
